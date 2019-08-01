@@ -1,0 +1,33 @@
+CREATE TABLE users (
+    id INT NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NOT NULL,     
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    confirmPassword VARCHAR(255) NOT NULL,
+    phone VARCHAR(10),
+    photo VARCHAR(255), 
+    PRIMARY KEY(id)
+);
+
+CREATE TABLE stocks (
+     id INT NOT NULL AUTO_INCREMENT,
+     stockName VARCHAR(255),     
+     qty INT,
+     currPrice INT,
+     leftOff INT,
+     PRIMARY KEY(id)
+);
+
+CREATE TABLE portfolio (
+	id INT NOT NULL AUTO_INCREMENT,
+	userId INT,     
+	stockId INT,
+    totalShares INT,
+    gain INT,
+    loss INT,
+    FOREIGN KEY fk_users(userId),
+    REFERENCES users(id),
+    FOREIGN KEY fk_stocks(stockId),
+    REFERENCES users(id),
+	PRIMARY KEY(id),
+);
