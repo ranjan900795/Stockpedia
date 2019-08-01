@@ -12,7 +12,7 @@ CREATE TABLE users (
 CREATE TABLE stocks (
      id INT NOT NULL AUTO_INCREMENT,
      stockName VARCHAR(255),     
-     qty INT,
+     shares INT,
      currPrice INT,
      leftOff INT,
      PRIMARY KEY(id)
@@ -20,14 +20,49 @@ CREATE TABLE stocks (
 
 CREATE TABLE portfolio (
 	id INT NOT NULL AUTO_INCREMENT,
-	userId INT,     
-	stockId INT,
+	userId INT NOT NULL,     
+	stockId INT NOT NULL,
     totalShares INT,
     gain INT,
     loss INT,
-    FOREIGN KEY fk_users(userId),
+    PRIMARY KEY(`id`),
+    FOREIGN KEY fk_users(userId)
     REFERENCES users(id),
-    FOREIGN KEY fk_stocks(stockId),
+    FOREIGN KEY fk_stocks(stockId)
+    REFERENCES stocks(id)
+);
+
+CREATE TABLE bid (
+    id INT NOT NULL AUTO_INCREMENT,
+    userId INT NOT NULL,     
+	stockId INT NOT NULL,
+	bidPrice INT,
+	shares INT,
+	PRIMARY KEY(`id`),
+	FOREIGN KEY fk_users(userId)
+    REFERENCES users(id)
+);
+
+CREATE TABLE offers (
+    id INT NOT NULL AUTO_INCREMENT,
+    userId INT NOT NULL,     
+	stockId INT NOT NULL,
+	offerPrice INT,
+	shares INT,
+	PRIMARY KEY(`id`),
+	FOREIGN KEY fk_users(userId)
+    REFERENCES users(id)
+);
+
+CREATE TABLE transaction (
+    id INT NOT NULL AUTO_INCREMENT,
+    buyerId INT NOT NULL,     
+	sellerId INT NOT NULL,
+	Price INT,
+	shares INT,
+	PRIMARY KEY(`id`),
+	FOREIGN KEY fk_buyer(buyerId)
     REFERENCES users(id),
-	PRIMARY KEY(id),
+    FOREIGN KEY fk_seller(sellerId)
+    REFERENCES users(id)
 );
