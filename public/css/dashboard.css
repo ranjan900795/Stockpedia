@@ -1,0 +1,17 @@
+body{
+  font-family: 'Crimson Text', serif;
+  background-color: #1D1C1C;
+}
+
+.anchor:hover{
+  text-decoration: none;
+  color: white;
+}
+hr{
+  border-color: #6c757d;
+}
+
+.navm{
+  text-align: left;
+  margin-left: 0;
+}
