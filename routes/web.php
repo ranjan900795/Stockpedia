@@ -12,6 +12,23 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+ return view('welcome');
+
+
 });
 Route::get('/dashboard','Dashboard@users');
+/*
+Route::get('/post/{id}', function($id){
+
+  return "this is the post number".$id;
+
+});
+
+Route::get('home/example/posts', array( 'as' => 'homeposts', function(){
+
+  $url = route('homeposts');//this is the helper function
+  return "the url is".$url;
+
+}));*/
+
+Route::get('/home','Home@home');//it'll access the index method in the controller
