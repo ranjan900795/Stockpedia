@@ -1,3 +1,83 @@
-body{
-   // background-color: #1D1C1C;
+html{
+    height: 100vh;
 }
+
+
+.container-fluid{
+    background-color: #1D1C1C;
+   
+    color: #a6a6a6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*.main{
+    background-color: #1D1C1C;
+    height:100%;
+    color: #a6a6a6;
+    font-family: 'Montserrat', sans-serif;
+}*/
+
+
+.col-3{
+
+   transform: rotate(-90deg);
+   left:-30px;
+   top:8px;
+}
+
+.pedia{
+    padding-left: 65px;
+}
+
+
+
+.logo{
+    margin-left: 50px;
+    margin-top: 20px;
+    color: azure;
+    
+}
+
+
+h1{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.rotate{
+    margin-top: 150px;
+}
+
+.anchor{
+    margin-top: 160px;
+    margin-left: 208px;
+    
+    
+}
+
+
+.login_link{
+    padding-left: 34px;
+    padding-right: 0px;
+}
+
+
+.col-9{
+    left:-30px;
+}
+
+
+.howToPlay{
+    top:130px;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color:white;
+    //text-decoration: none;
+}
+
