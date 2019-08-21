@@ -18,7 +18,7 @@
                             <div class="row stock"><h1 class="border-bottom mb-0">STOCK</h1></div>
                             <div class="row pedia"><h1 class=" pedia">PEDIA</h1></div>
                         </div>
-                        
+
                     </div>
                     <div class="div row rotate">
                         <div class="col-3">

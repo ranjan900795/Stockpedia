@@ -16,7 +16,13 @@ Route::get('/', function () {
 
 
 });
-Route::get('/dashboard','Dashboard@users');
+Route::get('/dashboard','Dashboard@myprofile');
+
+Route::get('/dashboard/portfolio','Dashboard@portfolio');
+
+Route::get('/dashboard/orderBook','Dashboard@orderBook');
+
+Route::get('/dashboard/transaction','Dashboard@transaction');
 /*
 Route::get('/post/{id}', function($id){
 

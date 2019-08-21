@@ -6,8 +6,20 @@ use Illuminate\Http\Request;
 
 class Dashboard extends Controller
 {
-  public function users()
+  public function myprofile()
   {
-      return view('dashboard');
+      return view('profile');
+  }
+  public function portfolio()
+  {
+      return view('portfolio');
+  }
+  public function orderBook()
+  {
+      return view('orderBook');
+  }
+  public function transaction()
+  {
+      return view('transaction');
   }
 }

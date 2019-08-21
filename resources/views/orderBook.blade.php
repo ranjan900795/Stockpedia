@@ -15,70 +15,52 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row">
-        <nav id="menu">
+      <div class="row h-100">
+        <nav id="menu" class="bg-white">
           <div class="col px-4 pt-3">
-            <p class=" m-0 h4 text-white font-weight-bold mx-1">Hi! User</p>
+            <p class=" m-0 h3 font-weight-bold mx-1">Hi! User</p>
           </div>
             <div class="col py-5">
               <div class="col  my-5">
-                <p class="text-muted h5 font-weight-bold">Portfolio<p>
+                <p class="h5 font-weight-bold"><a href="/dashboard" class="text-muted text-decoration-none">My Profile</a><p>
                 <hr width="50%" class="navm">
               </div>
               <div class="col my-5">
-                <p class="text-muted h5 font-weight-bold">Alloted Funds</p>
-                <hr width="70%" class="navm">
+                <p class="h5 font-weight-bold"><a href="/dashboard/portfolio" class="text-muted text-decoration-none">Portfolio</a></p>
+                <hr width="45%" class="navm">
               </div>
               <div class="col my-5">
-                <p class="text-muted h5 font-weight-bold">Order Book</p>
+                <p class="h5 font-weight-bold"><a href="/dashboard/orderBook" class="text-muted text-decoration-none">Order Book</a></p>
                 <hr width="60%" class="navm">
               </div>
               <div class="col my-5">
-                <p class="text-muted h5 font-weight-bold">Transaction</p>
+                <p class="h5 font-weight-bold"><a href="/dashboard/transaction" class="text-muted text-decoration-none">Transaction</a></p>
                 <hr width="60%" class="navm">
               </div>
             </div>
         </nav>
 
-        <main id="panel" class="w-100 h-100">
+        <main id="panel" class="w-100 mainPanel ">
           <header>
-            <div class="col-9 p-0">
-              <button class="toggle-button h1 text-white side border-0">☰</button>
+            <div class="row m-0">
+              <div class="col-9 ">
+                <button class="toggle-button h1 text-white side border-0">☰</button>
 
+              </div>
+              <div class="col-3 d-flex justify-content-end">
+              <a class="text-white h3 px-3 pt-2 font-weight-bold anchor" href="#">Logout</a>
+              </div>
             </div>
-            <div class="col-3">
-            <a class="text-muted h4 font-weight-bold anchor " href="#">Logout</a>
-          </div>
           </header>
           <div class="col  p-5 ">
-            <p class="text-white h4">User's Alloted Funds</p>
+            <p class="text-white h4">Welcome To your Profile!!!</p>
           </div>
-          <div class="col">
-            <div class="row px-5">
-              <div class="col-md-4 border-top border-bottom border-light p-2">
-                <p class="m-0 text-center text-muted h5 m-1">Total Money</p>
-                <p class="m-0 text-center text-white h6 m-1">10000000</p>
-              </div>
-              <div class="col-md-4 border-top border-bottom p-2">
-                <p class="m-0 text-center text-muted h5 m-1">Today's Gain/Loss</p>
-                <p class="m-0 text-center text-white h6 m-1">0.00%</p>
-              </div>
-              <div class="col-md-4 border-top border-bottom p-2">
-                <p class="m-0 text-center text-muted h5 m-1">Overall Gain/Loss</p>
-                <p class="m-0 text-center text-white h6 m-1">0.00%</p>
-              </div>
+          <div class="row m-0">
+            <div class="col-4 border border-danger">
+              1
             </div>
-          </div>
-          <div class="col p-5">
-            <div class="row">
-              <div class="col-sm-6">
-                <p class="m-0 text-center text-muted h5 m-1 text-underline">Stock's bought</p>
-                <hr width="30%">
-              </div>
-              <div class="col-sm-6 ">
-                <p class="m-0 text-center text-muted h5 m-1">Stock's sold</p>
-                <hr width="30%">
-              </div>
+            <div class="col-8 border border-danger">
+
             </div>
           </div>
         </main>
