@@ -53,14 +53,35 @@
             </div>
           </header>
           <div class="col  p-5 ">
-            <p class="text-white h4">Welcome To your Profile!!!</p>
+            <p class="text-white h3">Order Book</p>
           </div>
-          <div class="row m-0">
-            <div class="col-4 border border-danger">
-              1
-            </div>
-            <div class="col-8 border border-danger">
+          <div class="col">
+            <div class="row px-5">
+              <div class="col-3 border-top border-bottom border-light p-2">
+                <p class="m-0 text-center text-muted h5 m-1">Stock Name</p>
+              </div>
+              <div class="col-3 border-top border-bottom p-2">
+                <p class="m-0 text-center text-muted h5 m-1">Shares</p>
+              </div>
+              <div class="col-3 border-top border-bottom p-2">
+                <p class="m-0 text-center text-muted h5 m-1">Price</p>
+              </div>
+              <div class="col-3 border-top border-bottom p-2">
+                <p class="m-0 text-center text-muted h5 m-1">Status</p>
+              </div>
 
+                <div class="col-3 p-2 mt-2">
+                  <p class="m-0 text-center text-white h5 m-1">Infosys</p>
+                </div>
+                <div class="col-3 p-2 mt-2">
+                  <p class="m-0 text-center text-white h5 m-1">1000</p>
+                </div>
+                <div class="col-3 p-2 mt-2">
+                  <p class="m-0 text-center text-white h5 m-1"><i class="fa fa-inr" aria-hidden="true"></i>599999</p>
+                </div>
+                <div class="col-3 p-2 mt-2">
+                  <p class="m-0 text-center text-white h5 m-1">Pending</p>
+                </div>
             </div>
           </div>
         </main>
@@ -74,6 +95,7 @@
     <script type="text/javascript" src="{{ asset('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/slideout/1.0.1/slideout.min.js') }}"></script>
     <script src="dist/slideout.min.js"></script>
+    <script type="text/javascript" src="{{ asset('https://use.fontawesome.com/2dedc891aa.js') }}"></script>
     <script>
       var slideout = new Slideout({
         'panel': document.getElementById('panel'),
