@@ -38,3 +38,5 @@ Route::get('home/example/posts', array( 'as' => 'homeposts', function(){
 }));*/
 
 Route::get('/home','Home@home');//it'll access the index method in the controller
+Route::get('/home/login', 'Home@login');
+Route::get('/home/registration', 'Home@registration');

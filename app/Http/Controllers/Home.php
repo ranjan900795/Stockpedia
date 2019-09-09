@@ -10,4 +10,8 @@ class Home extends Controller
     {
         return view('homepage');
     }
+    public function registration()
+    {
+        return view ('registration');
+    }
 }
