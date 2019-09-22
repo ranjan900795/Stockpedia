@@ -41,9 +41,9 @@
             <div class="col">
                 <!--<span class ="login">Login |</span>-->
                 <div class="row wrapper">
-                    <div class=" col-lg-3 login p-0"><a class ="login_anchor"href="/login">login</a></div>
+                    <div class=" col-lg-3 login p-0"><a class ="login_anchor"href="/home/login">login</a></div>
                     <div class="col-lg-1 p-0 vertical_line"><span>|</span></div>
-                    <div class="registration p-0"><a href="/homepage/registration">registration</a></div>
+                    <div class="registration p-0"><a href="/home/registration">registration</a></div>
                 </div>
             </div>
         </nav>
