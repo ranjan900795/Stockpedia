@@ -23,6 +23,9 @@ Route::get('/dashboard/portfolio','Dashboard@portfolio');
 Route::get('/dashboard/orderBook','Dashboard@orderBook');
 
 Route::get('/dashboard/transaction','Dashboard@transaction');
+
+Route::get('/stocks/{name}','Stocks@stock');
+
 /*
 Route::get('/post/{id}', function($id){
 

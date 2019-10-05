@@ -53,15 +53,22 @@
             </div>
           </header>
           <div class="col  p-5 ">
-            <p class="text-white h4">Welcome To your Profile!!!</p>
+            <p class="text-white h2">Stocks</p>
           </div>
           <div class="row m-0">
-            <div class="col-4 border border-danger">
-              1
+            <div class="col-md-4 border border-white m-5 p-0">
+              <div class="dropdown dropright">
+                <button class="btn btn-lg dropdown-toggle text-white rounded-0 font-weight-bold" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Choose Your Stock Name!!!
+                </button>
+                <div class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item h4 font-weight-bold" href="/stocks/Infosys">Infosys</a>
+                  <a class="dropdown-item h4 font-weight-bold" href="#">Apple</a>
+                  <a class="dropdown-item h4 font-weight-bold" href="#">Hewlett Pakard</a>
+                </div>
+              </div>
             </div>
-            <div class="col-8 border border-danger">
 
-            </div>
           </div>
         </main>
 
