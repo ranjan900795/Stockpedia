@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Stocks;
 class Dashboard extends Controller
 {
   public function myprofile()
@@ -20,6 +20,7 @@ class Dashboard extends Controller
   }
   public function transaction()
   {
-      return view('transaction');
+      $data['data']=Stocks::getStockData();
+      return view('transaction',$data);
   }
 }

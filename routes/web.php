@@ -26,6 +26,13 @@ Route::get('/dashboard/transaction','Dashboard@transaction');
 
 Route::get('/stocks/{name}','Stocks@stock');
 
+
+
+
+
+Route::get('admin','Admin@addStock');
+
+Route::post('admin/add','Admin@add');
 /*
 Route::get('/post/{id}', function($id){
 
