@@ -25,25 +25,33 @@
                         <button type="submit" class="btn btn-primary">Update</button>
                     </form>
             </div>
-        <!---------------------end---------------------->
+        <---------------------end---------------------->
 
        <!------------------------Navbar----------------------->
-       <nav class="row-lg-12 nav">
-            <div class="logo col-lg-9">
-                <!--<h1>Stockpedia</h1>-->
-                <div class="row logo mx-0">
-                    <div class="col mx-0">
+       <nav class="row nav">
+            <div class="logo col-md-3 col-sm-9 col-xs-9 ">
+                <div class="row logo">
+                    <div class="col">
                         <div class="row mx-0"><h1 class=" stock border-bottom mb-0">STOCK</h1></div>
                         <div class="row mx-0"><h1 class=" pedia">PEDIA</h1></div>
                     </div>
                 </div>
             </div>
-            <div class="col">
-                <!--<span class ="login">Login |</span>-->
-                <div class="row wrapper">
-                    <div class=" col-lg-3 login p-0"><a class ="login_anchor"href="/home/login">login</a></div>
-                    <div class="col-lg-1 p-0 vertical_line"><span>|</span></div>
-                    <div class="registration p-0"><a href="/home/registration">registration</a></div>
+            <div class="col-md-7">
+                <form class="form-inline pt-5 flex-row-reverse">
+                    <div class="form-group order-1">
+                        <!-- <label for="email/username">Email/Username</label> -->
+                        <input type="text" name="uid" placeholder="Email/username" class="form-control mr-2">
+                    </div>
+                    <div class="form-group order-2">
+                        <!-- <label for="password">Password</label> -->
+                        <input type="password" class="form-control mr-2" name="password" placeholder="password">
+                    </div>
+                    <button type="submit" class = "btn btn-success ">Submit</button>
+                </form>
+            </div>
+            <div class="col-md-2 col-sm-3 col-xs-3">
+                    <div class="pt-5 reg_link"><a href="/home/registration">Sign up</a></div>
                 </div>
             </div>
         </nav>

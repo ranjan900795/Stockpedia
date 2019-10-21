@@ -11,7 +11,7 @@
     <title>Stockpedia</title>
 </head>
 <body>
-    <div class="contaienr-fluid">
+    <div class="container-fluid">
 
         @include('header')
         <!--------------------hero section------------------->
