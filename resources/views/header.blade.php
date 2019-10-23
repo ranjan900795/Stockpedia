@@ -37,19 +37,46 @@
                     </div>
                 </div>
             </div>
+            <!--login form-->
             <div class="col-md-7">
-                <form class="form-inline pt-5 flex-row-reverse">
-                    <div class="form-group order-1">
-                        <!-- <label for="email/username">Email/Username</label> -->
-                        <input type="text" name="uid" placeholder="Email/username" class="form-control mr-2">
+                <div class = "popup"><a data-toggle="modal" data-target="#exampleModalCenter" style="font-size:1.7rem"class="a">Sign In</a></div>
+                 
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Sign in</h5>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                    <div class="form-group order-2">
-                        <!-- <label for="password">Password</label> -->
-                        <input type="password" class="form-control mr-2" name="password" placeholder="password">
+                    <div class="modal-body">
+                        <form class="form" action="{{URL::to('/login_submit')}}" method = "post">
+                            <div class="form-group">
+                                <label for="email/username">Email/Username</label> 
+                                <input type="text" name="name/email" placeholder="" class="form-control mr-2">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label> 
+                                <input type="password" class="form-control" name="password" placeholder="">
+                            </div> 
+                            <div class="form-group"> 
+                                <input type="hidden" class="form-control" name="_token" value="{{csrf_token()}}" placeholder="">
+                            </div> 
+                            <button type="submit" name = "button" class = "btn btn-success ">Submit</button>
+                        </form>
+                        <!-- <div style="margin:0 auto"><p>Or you can sign in with</p></div> -->
                     </div>
-                    <button type="submit" class = "btn btn-success ">Submit</button>
-                </form>
+                    <div class="modal-footer"style="margin:0 auto;">
+                        <p>Or you can sign in with</p>
+                    </div>
+                    </div>
+                </div>
+                </div>
             </div>
+            <!--end of login form-->
             <div class="col-md-2 col-sm-3 col-xs-3">
                     <div class="pt-5 reg_link"><a href="/home/registration">Sign up</a></div>
                 </div>

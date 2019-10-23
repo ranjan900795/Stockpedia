@@ -42,12 +42,13 @@
         <div class="row-lg-12 main-container">
             <h2>SignUp</h2>
         </div>
-        <form class="signup-form" action="">
-            <input type="text" name="first" placeholder="Name">
+        <form class="signup-form" action="{{URL::to('/registration_submit')}}" method="post">
+            <input type="text" name="name" placeholder="Name">
             <input type="text" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
             <input type="password" name="confirmPassword" placeholder="Confirm Password">
-            <button type="submit" name="submit">Sign Up</button>
+            <input type="hidden" name="_token" value="{{csrf_token()}}">
+            <button type="submit" name="button">Sign Up</button>
         </form>
     </div>
 </body>
