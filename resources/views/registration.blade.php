@@ -43,8 +43,8 @@
             <h2>SignUp</h2>
         </div>
         <form class="signup-form" action="{{route('signup')}}" method="post">
-            <input type="text" name="name" placeholder="Name">
-            <input type="text" name="email" placeholder="Email">
+            <input type="text" name="name" placeholder="Name" value="{{old('name')}}">
+            <input type="text" name="email" placeholder="Email" value="{{old('email')}}">
             <input type="password" name="password" placeholder="Password">
             <input type="password" name="password_confirmation" placeholder="Confirm Password">
             <input type="hidden" name="_token" value="{{csrf_token()}}">
