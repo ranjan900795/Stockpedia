@@ -48,7 +48,11 @@ Route::get('home/example/posts', array( 'as' => 'homeposts', function(){
 }));*/
 
 Route::get('/home','Home@home');//it'll access the index method in the controller
-Route::get('/home/login', 'Home@login');
-Route::get('/home/registration', 'Home@registration');
-Route::post('/login_submit','Home@login_submit');
-Route::post('/registration_submit','Home@registration_submit');
+// Route::get('/home/login', 'Home@login');
+// Route::get('/home/registration', 'Home@registration');
+// Route::post('/login_submit','Home@login_submit');
+// Route::post('/registration_submit','Home@registration_submit');
+
+Route::get('home/registration', 'authController@showRegisterForm')->name('signup');
+Route::post('home/registration', 'authController@register');
+
