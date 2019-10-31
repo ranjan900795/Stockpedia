@@ -47,6 +47,10 @@ Route::get('home/example/posts', array( 'as' => 'homeposts', function(){
 
 }));*/
 
+
+Route::group(['middlewareGroups' => ['web']], function () {
+  // Add your routes here
+
 Route::get('/home','Home@home');//it'll access the index method in the controller
 // Route::get('/home/login', 'Home@login');
 // Route::get('/home/registration', 'Home@registration');
@@ -55,4 +59,4 @@ Route::get('/home','Home@home');//it'll access the index method in the controlle
 
 Route::get('home/registration', 'authController@showRegisterForm')->name('signup');
 Route::post('home/registration', 'authController@register');
-
+});
