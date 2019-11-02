@@ -20,7 +20,7 @@ class Dashboard extends Controller
   }
   public function transaction()
   {
-      $data['data']=Stocks::getStockData();
+      $data['data']=Stocks::getStockData();    //model call for all fetching all stock name
       return view('transaction',$data);
   }
 }

@@ -24,11 +24,13 @@ Route::get('/dashboard/orderBook','Dashboard@orderBook');
 
 Route::get('/dashboard/transaction','Dashboard@transaction');
 
-Route::get('/stocks/{name}','Stocks@stock');
+Route::get('/stocks/{name}','StocksController@stock');
 
+Route::get('/stocks/getCurrentPrice/{name}','StocksController@getCurrentPrice');
 
+Route::post('/stocks/bid/{name}','StocksController@bid');
 
-
+Route::post('/stocks/offer/{name}','StocksController@offer');
 
 Route::get('admin','Admin@addStock');
 
