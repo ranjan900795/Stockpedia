@@ -63,7 +63,22 @@
           </form>
         </div>
       </div>
-
+      <hr class="bg-danger">
+      <div class="row py-2">
+        <div class="col-12 col-sm-6  p-2">
+          <p class="text-decoration font-weight-bold text-white text-center h5 ">Bid Queue </p>
+          <div class="col ">
+            <p class="text-white text-center m-0" id="bidQueue"></p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6  p-2">
+          <p class="text-decoration font-weight-bold text-white text-center h5 ">Offer Queue </p>
+          <div class="col ">
+            <p class="text-white text-center m-0" id="offerQueue"></p>
+          </div>
+        </div>
+      </div>
+      <hr class="bg-danger">
       <div class="row ">
         <div class="col-12 p-3  ">
           <p class="text-decoration font-weight-bold text-white h4 pl-3">Sell here</p>

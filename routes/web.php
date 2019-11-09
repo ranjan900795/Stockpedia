@@ -32,6 +32,13 @@ Route::post('/stocks/bid/{name}','StocksController@bid');
 
 Route::post('/stocks/offer/{name}','StocksController@offer');
 
+Route::get('/stocks/bidQueue/{name}','StocksController@bidQueue');
+
+Route::get('/stocks/offerQueue/{name}','StocksController@offerQueue');
+
+
+
+
 Route::get('admin','Admin@addStock');
 
 Route::post('admin/add','Admin@add');

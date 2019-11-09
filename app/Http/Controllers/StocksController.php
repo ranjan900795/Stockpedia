@@ -29,4 +29,20 @@ class StocksController extends Controller
     {
       Stocks::offerStock($name);
     }
+
+    public function bidQueue($name)
+    {
+      $data['data']=Stocks::getBidQueue($name);
+      foreach ($data as $row ) {
+        return json_encode($row);
+      }
+    }
+
+    public function offerQueue($name)
+    {
+      $data['data']=Stocks::getOfferQueue($name);
+      foreach ($data as $row ) {
+        return json_encode($row);
+      }
+    }
 }

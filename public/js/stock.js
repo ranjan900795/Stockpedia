@@ -5,6 +5,10 @@ $(document).ready(function (){
   });
 
   $('#currentPriceBid').click(function (){
+    $('#typeBid').text('Current Price');
+  });
+
+/*  $('#currentPriceBid').click(function (){
     var url = "/stocks/getCurrentPrice/"+stockName;
 
     $.ajax(url, {
@@ -21,7 +25,7 @@ $(document).ready(function (){
 
 
     };
-
+*/
 
     $('#bid').click(function (){
        var data = $('#bidForm').serialize();
@@ -46,9 +50,11 @@ $(document).ready(function (){
       $('#typeOffer').text('List Price');
     });
 
-
-
     $('#currentPriceOffer').click(function (){
+      $('#typeOffer').text('Current Price');
+    });
+
+/*    $('#currentPriceOffer').click(function (){
       var url = "/stocks/getCurrentPrice/"+stockName;
 
       $.ajax(url, {
@@ -58,12 +64,12 @@ $(document).ready(function (){
 
     });
     var currentPriceOffer = function(response){
-      
+
       $('#typeOffer').text('Current Price');
       $("#priceOffer").val(response);
 
     };
-
+*/
     $('#offer').click(function (){
        var data = $('#offerForm').serialize();
        var url = "/stocks/offer/"+stockName;
@@ -80,4 +86,59 @@ $(document).ready(function (){
 
          alert('SUCCESS!!');
     };
+
+
+
+    function getBidQueue(){
+      var url = "/stocks/bidQueue/"+stockName;
+      $.ajax(url,{
+          type: "GET",
+          success: bidQueue
+      });
+    }
+
+    var bidQueue = function(data) {
+        //console.log the response
+        $("#bidQueue").empty();
+        $.each(JSON.parse(data), function (index, value) {
+        $("#bidQueue").append('<p>' + value + '</p>');
+        if(index == 10){
+          return false;
+        }
+        });
+        //Send another request in 10 seconds.
+        setTimeout(function(){
+            getBidQueue();
+        }, 5000);
+    }
+
+    //Call our function
+    getBidQueue();
+
+    function getOfferQueue(){
+      var url = "/stocks/offerQueue/"+stockName;
+      $.ajax(url,{
+          type: "GET",
+          success: offerQueue
+      });
+    }
+
+    var offerQueue = function(data) {
+        //console.log the response
+        $("#offerQueue").empty();
+        $.each(JSON.parse(data), function (index, value) {
+        $("#offerQueue").append('<p>' + value + '</p>');
+        if(index == 10){
+          return false;
+        }
+        });
+
+        //Send another request in 10 seconds.
+        setTimeout(function(){
+            getOfferQueue();
+        }, 5000);
+    }
+
+    //Call our function
+    getOfferQueue();
 });

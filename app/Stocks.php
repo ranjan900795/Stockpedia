@@ -47,4 +47,16 @@ class Stocks extends Model
         ['userId' => "1", 'stockId' => "$stockId", 'offerPrice' => "$offerPrice", 'shares' => "$shares"]
       );
     }
+
+    public static function getBidQueue($name){
+      $stockId =  DB::table('stocks')->where('stockName', $name)->value('id');
+      $data = DB::table('bid')->where('stockId',$stockId)->orderBy('bidPrice', 'desc')->pluck('bidPrice');
+      return $data;
+    }
+
+    public static function getOfferQueue($name){
+      $stockId =  DB::table('stocks')->where('stockName', $name)->value('id');
+      $data = DB::table('offers')->where('stockId',$stockId)->orderBy('offerPrice', 'asc')->pluck('offerPrice');
+      return $data;
+    }
 }
