@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    //so that laravel dosen't create two cols for created and updated at 
     public $timestamps = false;
     use Notifiable;
 

@@ -18,7 +18,7 @@
       <div class="row h-100">
         <nav id="menu" class="bg-white">
           <div class="col px-4 pt-3">
-            <p class=" m-0 h3 font-weight-bold mx-1">Hi! User</p>
+            <p class=" m-0 h3 font-weight-bold mx-1">Hi! <?php echo Session::get('id'); ?></p>
           </div>
             <div class="col py-5">
               <div class="col  my-5">

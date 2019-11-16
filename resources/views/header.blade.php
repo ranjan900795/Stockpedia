@@ -53,10 +53,10 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <form class="form" action="{{URL::to('/login_submit')}}" method = "post">
+                        <form class="form" action="{{url('/home')}}" method = "post">
                             <div class="form-group">
                                 <label for="email/username">Email/Username</label> 
-                                <input type="text" name="name/email" placeholder="" class="form-control mr-2">
+                                <input type="text" name="email" placeholder="" class="form-control mr-2">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password</label> 
